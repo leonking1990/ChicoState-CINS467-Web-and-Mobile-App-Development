@@ -1,27 +1,29 @@
-# Assignment 3
+# Assignment 4
 
 ## Summery
 
-I used the sample app from the Flutter create command as a template and expanded it to add more functionality.
-the app can add, remove, and clear the current count in the counter.
+I created a simple app that can help the user become more organized my allow think to list there To-Dos.
 
-## Details about my project:
+## Details about Assignment 4:
 
-* **Having At Least Three Buttons**
-  * The 3 properties of each button:
-    * has child Icon
-    * has onPressed
-      * Each button unique action would be ether add to, remove from, or clear the current count in the counter.
-      * For the label each button has an icon to imply its function.
-    * style 
-      * each button has an unique color.
-      * the add button is circular 
-* **Have At Least Two Text Widgets**
-  * Each Text widget must contain at least 2 properties:
-    * each has unique data
-    * style (an instance of the TextStyle class that is used to style the text)
-      * each has its personalized style of color, size and/or font.
-* **Make Updates When Each Button Is Pressed**
-  * first button has a function that add one to the counter it has an add icon.
-  * second button have a function to remove one from the counter ans had a remove (subtract) icon.
-  * third button has a function to clear the counter reverting it back to 0 and have an cancel icon.
+* **Use a Form**
+    * Needs to be some way for the user to provide text input and submit their input:
+        * used showDialog to add a to the To-do list this is can be done by tapping the plus button in the bottom corner.
+        * another showDialog to add a tsk under the To-Do instance this is can be done by tapping the desired To-do text.
+    * Need to have at least two separate fields where users can enter input: 
+        * showDialog to add a To-Do.
+        * showDialog to add a Task under the To-Do.
+
+*  **Store a Persistent State in the SQLite DB, local filesystem, or platform-specific persistent storage on the phone or web**
+    * You must store at least two different data types (e.g. String, int, bool, double, List):
+        * I am storing each instances of To-do each class which has a String and a List<String>.
+    * You must successfully use one of the plugins:
+        * used shared_preferences
+
+* **Have the Form update the state**
+    * When the form receives user input, it must update data that is stored in a persistent state:
+        * This is done each time the user adds a new To-Do or task under the To-Do.
+
+* **Have the Form update the state**
+    * Have the View update based on the changed state:
+        * This is completed as each To_Do instances update.
