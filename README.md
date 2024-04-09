@@ -1,29 +1,33 @@
-# Assignment 4
+# Assignment 5 - PokéDex App
 
-## Summery
+## Summary
 
-I created a simple app that can help the user become more organized my allow think to list there To-Dos.
+This app serves as a simple yet functional PokéDex, designed to leverage the [Pokémon API](https://pokeapi.co/) for fetching and displaying Pokémon data. It's crafted with a focus on user-friendly design principles and demonstrates effective interaction with REST APIs using Dart's `http` package. This project is still a work in progress, and while some features are under development, all requirements for Assignment 5 have been met.
 
-## Details about Assignment 4:
+## Features
 
-* **Use a Form**
-    * Needs to be some way for the user to provide text input and submit their input:
-        * used showDialog to add a to the To-do list this is can be done by tapping the plus button in the bottom corner.
-        * another showDialog to add a tsk under the To-Do instance this is can be done by tapping the desired To-do text.
-    * Need to have at least two separate fields where users can enter input: 
-        * showDialog to add a To-Do.
-        * showDialog to add a Task under the To-Do.
+### Simple and User-friendly UI
+- Implements a minimalist and intuitive design to guide users through its functionalities smoothly.
+- Key UI components, such as the search bar and information display areas, are strategically placed to enhance user interactions.
+- Interactive elements allow for seamless retrieval and viewing of Pokémon data, providing an engaging user experience.
 
-*  **Store a Persistent State in the SQLite DB, local filesystem, or platform-specific persistent storage on the phone or web**
-    * You must store at least two different data types (e.g. String, int, bool, double, List):
-        * I am storing each instances of To-do each class which has a String and a List<String>.
-    * You must successfully use one of the plugins:
-        * used shared_preferences
+### Retrieve Data from a REST API
+- Employs the Dart `http` package to execute HTTP GET requests, efficiently fetching data from the Pokémon API.
+- Showcases the ability to connect with web services beyond classroom examples, reinforcing concepts related to REST API integration.
 
-* **Have the Form update the state**
-    * When the form receives user input, it must update data that is stored in a persistent state:
-        * This is done each time the user adds a new To-Do or task under the To-Do.
+### Display Data in an Engaging Manner
+- Detailed Pokémon information (e.g., ID, Name, Height, Weight, Type) is elegantly presented, extracted directly from the API response.
+- Pokémon stats (e.g., HP, Attack, Defense, Special Attack, Special Defense, Speed) are displayed in a visually appealing format, utilizing Flutter widgets like `Text`, `ListTile`, and `Card`.
+- Processes and formats data to ensure readability and visual appeal, moving beyond the presentation of raw JSON to offer a refined view of Pokémon characteristics.
 
-* **Have the Form update the state**
-    * Have the View update based on the changed state:
-        * This is completed as each To_Do instances update.
+### Ongoing Development Note
+- **This app is currently in development**. Some planned features are not yet implemented, but the core functionalities required for Assignment 5 are fully operational. I am working to enhance the app with more features and improvements.
+
+### Technical Highlights
+- **Built with Dart and Flutter**: Demonstrates the versatility of Dart and Flutter in creating cross-platform mobile applications.
+- **REST API Integration**: Features robust implementation of network requests to public APIs, highlighting essential web communication techniques.
+- **Effective State Management**: Ensures a dynamic and responsive UI by managing state changes based on user inputs and API responses.
+
+## Acknowledgments
+
+This project was developed as part of an academic assignment. It reflects both a learning journey and a foundation for future development. Special thanks to the Flutter and Dart communities for providing extensive resources and support.
