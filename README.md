@@ -1,33 +1,30 @@
-# Assignment 5 - PokéDex App
+# Assignment 6
 
 ## Summary
 
-This app serves as a simple yet functional PokéDex, designed to leverage the [Pokémon API](https://pokeapi.co/) for fetching and displaying Pokémon data. It's crafted with a focus on user-friendly design principles and demonstrates effective interaction with REST APIs using Dart's `http` package. This project is still a work in progress, and while some features are under development, all requirements for Assignment 5 have been met.
+I updated the app from Assignment 4 to implement Firestore, added a delete function, and made some quality of life improvements regarding usability.
 
-## Features
+## Details about Assignment 6:
 
-### Simple and User-friendly UI
-- Implements a minimalist and intuitive design to guide users through its functionalities smoothly.
-- Key UI components, such as the search bar and information display areas, are strategically placed to enhance user interactions.
-- Interactive elements allow for seamless retrieval and viewing of Pokémon data, providing an engaging user experience.
+* **Use a Form**
+    * There needs to be some way for the user to provide text input and submit their input:
+        * Used `showDialog` to add to the To-Do list. This can be done by tapping the plus button in the bottom corner.
+        * Another `showDialog` to add a task under the To-Do instance. This can be done by tapping the desired To-Do text.
+    * Need to have at least two separate fields where users can enter input: 
+        * `showDialog` to add a To-Do.
+        * `showDialog` to add a Task under the To-Do.
 
-### Retrieve Data from a REST API
-- Employs the Dart `http` package to execute HTTP GET requests, efficiently fetching data from the Pokémon API.
-- Showcases the ability to connect with web services beyond classroom examples, reinforcing concepts related to REST API integration.
+* **Store a Persistent State in SQLite DB, Local Filesystem, or Platform-Specific Persistent Storage**
+    * You must store at least two different data types (e.g., String, int, bool, double, List):
+        * I am storing instances of To-Do, each class has a String and List<dynamic>.
+    * You must successfully use one of the plugins:
+        * Used `cloud_firestore` and `firebase_core` plugins.
 
-### Display Data in an Engaging Manner
-- Detailed Pokémon information (e.g., ID, Name, Height, Weight, Type) is elegantly presented, extracted directly from the API response.
-- Pokémon stats (e.g., HP, Attack, Defense, Special Attack, Special Defense, Speed) are displayed in a visually appealing format, utilizing Flutter widgets like `Text`, `ListTile`, and `Card`.
-- Processes and formats data to ensure readability and visual appeal, moving beyond the presentation of raw JSON to offer a refined view of Pokémon characteristics.
+* **Have the Form Update the State**
+    * When the form receives user input, it must update data that is stored in a persistent state:
+        * This is done each time the user adds or deletes a new To-Do or task, or taps the task to mark it as complete.
 
-### Ongoing Development Note
-- **This app is currently in development**. Some planned features are not yet implemented, but the core functionalities required for Assignment 5 are fully operational. I am working to enhance the app with more features and improvements.
-
-### Technical Highlights
-- **Built with Dart and Flutter**: Demonstrates the versatility of Dart and Flutter in creating cross-platform mobile applications.
-- **REST API Integration**: Features robust implementation of network requests to public APIs, highlighting essential web communication techniques.
-- **Effective State Management**: Ensures a dynamic and responsive UI by managing state changes based on user inputs and API responses.
-
-## Acknowledgments
-
-This project was developed as part of an academic assignment. It reflects both a learning journey and a foundation for future development. Special thanks to the Flutter and Dart communities for providing extensive resources and support.
+* **Reflect Database Changes in the App State**
+    * When the data in your Firestore Database changes, the view that the user sees in your app must also update to reflect that change:
+        * This is accomplished within the `FireStorage` class. A function listens for a change in the database to update the state of the app accordingly.
+    * The updates to the state and view should be tested with at least two different types of inputs. You will likely need to use operations to convert the data (e.g., from the form to storage, and/or from storage to what is displayed to the user). This is tested with three inputs from the user: adding a ToDo, adding a task under the ToDo, or marking it as complete.
