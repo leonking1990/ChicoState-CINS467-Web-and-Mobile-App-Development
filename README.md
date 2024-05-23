@@ -16,7 +16,7 @@ CineCritique is an Android app developed as my final project for CSCI 467 and CS
 
 ## Authentication
 
-- **Google Firebase Authentication**: Used to create and log users.
+- **Google Firebase Authentication**: Used to create and log users (Google and Facebook login are currently disabled).
 
 ## Database and Storage
 
@@ -45,9 +45,9 @@ To get started with CineCritique, follow these steps to install the APK:
 
 ## Contributions
 
-Contributions are welcome! Please create a pull request or open an issue for any improvements or bugs you find.
+This is a solo project 
 
 ## License
 
-This project is licensed under the MIT License.
+APIs are licensed under rapidapi.
 
